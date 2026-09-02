@@ -87,9 +87,12 @@ a{color:inherit;text-decoration:none}
   min-height:0;
   object-fit:initial;
   display:block;
-  transform:translate3d(0,var(--email-shift,0px),0);
+  transform:translate3d(0,0,0);
   transition:transform 1.1s cubic-bezier(.2,.7,.2,1);
   will-change:transform;
+}
+.email-card.is-email-hovered img{
+  transform:translate3d(0,var(--email-shift,0px),0);
 }
 .email-card:hover{box-shadow:0 16px 36px rgba(0,0,0,.35);border-color:rgba(169,104,255,.55)}
 

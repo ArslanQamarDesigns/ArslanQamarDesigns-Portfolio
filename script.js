@@ -51,7 +51,14 @@ emailCards.forEach(card => {
     }
   }
 
-  card.addEventListener('mouseenter', () => updateEmailShift(card));
+  card.addEventListener('mouseenter', () => {
+    updateEmailShift(card);
+    card.classList.add('is-email-hovered');
+  });
+
+  card.addEventListener('mouseleave', () => {
+    card.classList.remove('is-email-hovered');
+  });
 });
 
 window.addEventListener('load', updateAllEmailShifts);
